@@ -32,7 +32,6 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/barbie.jpg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -67,6 +66,24 @@
     width: 90%; /* Ensure the image is 70% of its container's width */
     height: auto; /* Maintain aspect ratio */
   }
+
+  .columns.is-multiline > .column {
+    margin-bottom: 0 !important;
+    padding-bottom: 0.25rem !important;
+  }
+  
+  .columns.is-multiline {
+    margin-bottom: -0.5rem !important;
+  }
+  
+  .columns.is-multiline .column p {
+    margin-bottom: 0.25rem !important;
+    margin-top: 0.25rem !important;
+  }
+  
+  .columns.is-multiline .column iframe {
+    margin-bottom: 0.25rem !important;
+  }
 </style>
 
 </head>
@@ -80,19 +97,120 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">GaussianBlender: Instant Editing of 3D Gaussians with Disentangled Latent Spaces</h1>
+          <h1 class="title is-1 publication-title" style="font-size: calc(3rem - 2pt);"><span style="background: linear-gradient(90deg, #00FFFF, #FF00FF, #9D00FF, #0080FF); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">GaussianBlender</span>: Instant Stylization of 3D Gaussians with Disentangled Latent Spaces 🎨</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href=""><span class="dnerf">GaussianBlender</span> Authors</a></span>       
+              <a href="https://basakmelisocal.github.io/">Melis Öcal</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://xyxingx.github.io/">Xiaoyan Xing</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://unique1i.github.io/">Yue Li</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/vien-ngo-383ba3a6/">Vien Ngo</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://karaoglusezer.github.io/">Sezer Karaoğlu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://staff.fnwi.uva.nl/th.gevers/">Theo Gevers</a><sup>1</sup></span>
+            </span>      
+          </div>
+
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Amsterdam</span>
+            <span class="author-block"><sup>2</sup>Bosch Center for Artificial Intelligence</span>
           </div>
 
 
           <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming soon!)</span>
+                  </a>
+              </span>
+            </div>
+          </div>
             
         </div>
       </div>
     </div>
   </div>
+</section>
+
+
+<!--
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline is-centered">
+
+
+      <div class="column is-one-quarter">
+        <iframe src="vangogh/c216f461f2de400797dfb2cb9cc1232d_original_gaussians_46.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 0.9em;"><b>Original</b></p>
+      </div>
+      <div class="column is-one-quarter">
+        <iframe src="vangogh/c216f461f2de400797dfb2cb9cc1232d_ep_0037_full_rebuild_gaussian_46.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 0.9em;"><b><span style="color:#0F52BA;font-style:italic;">"Make it Starry Night Van Gogh painting style."</span></b></p>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
+      <div class="column is-four-fifths">
+        <div class="pipeline overview">
+          <img src="./images/teaser4.gif" style="margin-bottom: 15px;">
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TLDR</h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li>We introduce, <span class="dnerf">GaussianBlender</span>, a diffusion-based, feed-forward 3D Gaussian splat editor that delivers high-quality stylization instantly at inference, fully eliminates per-asset test-time optimization, 
+              generalizes to out-of-domain inputs, supports practical interactive use and large-scale production.</li>
+            <li>We propose an effective strategy for learning 3D diffusion priors in structured, disentangled latent spaces -  decoupling appearance from geometry with controlled information sharing - to enable controllable edits and simplify Gaussian parameter learning.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="pipeline overview">
+          <img src="./images/arch3.gif" style="margin-bottom: 15px;">
+          <p class="content has-text-justified"><b>Overview of our method.</b> <b><span style="color: #1084c7;">(1) Latent space learning:</span></b> Given input Gaussians, our method first groups them based on spatial proximity and and encodes 
+            into group-structured disentangled latent spaces, with controlled cross-branch feature sharing. <b><span style="color: #f73ba3;">(2) Latent diffusion pre-training:</span></b>  A denoiser then learns to denoise the noisy appearance 
+            latent conditioned on a text embedding. <b><span style="color: #f78c3b;">(3) Latent editing:</span></b> Once 3D priors are captured, denoiser is further trained to learn an editing function that maps the input appearance 
+            latent to a modified latent, guided by the geometry latent. At <b><span style="color: #66b2b2;">inference</span></b>, <span class="dnerf">GaussianBlender</span> generates modified high-quality, 
+            3D-consistent assets from text prompts in a single feed-forward pass instantly, fully eliminating test-time optimization. Trainable models at each stage are denoted.</p>
+        </div>
+      </div>
+    </div>
+
 </section>
 
 
@@ -103,84 +221,90 @@
     <div class="columns is-multiline is-centered">
       <!-- Row 1 -->
       <div class="column is-one-quarter">
-        <iframe src="barbie/d98d429ede3b48279d5e20bc92b39a12_original_gaussians_51.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b>Original</b></p>
+        <iframe src="images/iframe1.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 0.9em;"><b>Input Asset</b></p>
       </div>
       <div class="column is-one-quarter">
-        <iframe src="barbie/d98d429ede3b48279d5e20bc92b39a12_ep_0041_full_rebuild_gaussian_51.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b><span style="color: #FF46A2; font-style: italic;">"Make it Barbie style."</span></b></p>
+        <iframe src="images/iframe2.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 1.0em;"><b><span style="background: linear-gradient(90deg, #0F52BA, #4682B4); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-style: italic; font-family: 'Bradley Hand', cursive; display: inline-block; font-weight: 900; -webkit-text-stroke: 0.1px #0F52BA;">"Make it Starry Night Van Gogh painting style."</span></b></p>
       </div>
 
       <div class="column is-one-quarter">
-        <iframe src="barbie/ac7f792f0c1947aa823c221cd9c8d435_original_gaussians_69.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b>Original</b></p>
+        <iframe src="images/iframe5.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 0.9em;"><b>Input Asset</b></p>
       </div>
       <div class="column is-one-quarter">
-        <iframe src="barbie/ac7f792f0c1947aa823c221cd9c8d435_ep_0050_full_rebuild_gaussian_69.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b><span style="color: #FF46A2; font-style: italic;">"Make it Barbie style."</span></b></p>
+        <iframe src="images/iframe6.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 1.0em;"><b><span style="background: linear-gradient(90deg, #FFD700, #FF8C00, #FF6347, #FF1493, #8B008B); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-style: italic; font-family: 'Bradley Hand', cursive; display: inline-block; font-weight: 900; -webkit-text-stroke: 0.1px #FF8C00;">"Make it in sunset palette"</span></b></p>
       </div>
 
       <!-- Row 2 -->
       <div class="column is-one-quarter">
-        <iframe src="vangogh/20addc5a445840e3a6dc79c2d929785c_original_gaussians_40.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b>Original</b></p>
+        <iframe src="images/iframe7.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 0.9em;"><b>Input Asset</b></p>
       </div>
       <div class="column is-one-quarter">
-        <iframe src="vangogh/20addc5a445840e3a6dc79c2d929785c_ep_0034_full_rebuild_gaussian_40.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b><span style="color: #0F52BA; font-style: italic;">"Make it Starry Night Van Gogh painting style."</span></b>
+        <iframe src="images/iframe8.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 1.0em;"><b><span style="background: linear-gradient(90deg, #FF46A2, #FF1493); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-style: italic; font-family: 'Bradley Hand', cursive; display: inline-block; font-weight: 900; -webkit-text-stroke: 0.1px #FF46A2;">"Make it Barbie style."</span></b>
       </div>
 
       <div class="column is-one-quarter">
-        <iframe src="vangogh/c216f461f2de400797dfb2cb9cc1232d_original_gaussians_46.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b>Original</b></p>
+        <iframe src="images/iframe9.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 0.9em;"><b>Input Asset</b></p>
       </div>
       <div class="column is-one-quarter">
-        <iframe src="vangogh/c216f461f2de400797dfb2cb9cc1232d_ep_0037_full_rebuild_gaussian_46.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b><span style="color: #0F52BA; font-style: italic;">"Make it Starry Night Van Gogh painting style."</span></b></p>
+        <iframe src="images/iframe10.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 1.0em;"><b><span style="background: linear-gradient(90deg, #FF10F0, #39FF14); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-style: italic; font-family: 'Bradley Hand', cursive; display: inline-block; font-weight: 900; -webkit-text-stroke: 0.1px #FF10F0;">"Make it pop art neon duotone."</span></b></p>
       </div>
     
 
     <div class="column is-one-quarter">
-        <iframe src="rainbow/39a7e798206348db8595c320694c0261_original_gaussians_33.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b>Original</b></p>
+        <iframe src="images/iframe11.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 0.9em;"><b>Input Asset</b></p>
       </div>
       <div class="column is-one-quarter">
-        <iframe src="rainbow/39a7e798206348db8595c320694c0261_ep_0024_full_rebuild_gaussian_33.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;">
+        <iframe src="images/iframe12.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 1.0em;">
 		  <b>
 		    <span style="
-		      background: linear-gradient(90deg, pink, red, orange, yellow, turquoise, blue, indigo, violet);
+		      background: linear-gradient(90deg, #00FFFF, #FF00FF, #9D00FF, #0080FF);
 		      -webkit-background-clip: text;
 		      -webkit-text-fill-color: transparent;
 		      font-style: italic;
+		      font-family: 'Bradley Hand', cursive;
 		      display: inline-block;
 		      transition: background-position 1s linear;
 		      background-size: 100%;
 		      background-position: left;
+		      font-weight: 900;
+		      -webkit-text-stroke: 0.1px #00FFFF;
 		    ">
-		      "Make its colours look like rainbow."
+		      "Make it in cyberpunk style."
 			</span>
 		  </b>
 		</p>
       </div>
 
       <div class="column is-one-quarter">
-        <iframe src="rainbow/cbd7f75dd1764c71a83196e9336b04f0_original_gaussians_68.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b>Original</b></p>
+        <iframe src="images/iframe3.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 0.9em;"><b>Input Asset</b></p>
       </div>
       <div class="column is-one-quarter">
-        <iframe src="rainbow/cbd7f75dd1764c71a83196e9336b04f0_ep_0035_full_rebuild_gaussian_68.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;">
+        <iframe src="images/iframe4.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 1.0em;">
 		  <b>
 		    <span style="
-		      background: linear-gradient(90deg, pink, red, orange, yellow, turquoise, blue, indigo, violet);
+		      background: linear-gradient(90deg, #FF0080, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3);
 		      -webkit-background-clip: text;
 		      -webkit-text-fill-color: transparent;
 		      font-style: italic;
+		      font-family: 'Bradley Hand', cursive;
 		      display: inline-block;
 		      transition: background-position 1s linear;
 		      background-size: 100%;
 		      background-position: left;
+		      font-weight: 900;
+		      -webkit-text-stroke: 0.1px #FF0080;
 		    ">
 		      "Make its colours look like rainbow."
 			</span>
@@ -190,12 +314,12 @@
 
       <!-- Row 4 -->
       <div class="column is-one-quarter">
-        <iframe src="golden/0805114062bf46b5be7abf87fef08738_original_gaussians_69.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b>Original</b></p>
+        <iframe src="images/iframe13.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 0.9em;"><b>Input</b></p>
       </div>
       <div class="column is-one-quarter">
-        <iframe src="golden/0805114062bf46b5be7abf87fef08738_ep_0046_full_rebuild_gaussian_69.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b><span style="color: #EFBF04; font-style: italic;">"Make it golden."</span></b>
+        <iframe src="images/iframe14.html" width="100%" height="300px" frameborder="0"></iframe>
+        <p class="has-text-centered" style="font-size: 1.0em;"><b><span style="color: #9370DB; font-style: italic; font-family: 'Bradley Hand', cursive; font-weight: 900; -webkit-text-stroke: 0.1px #9370DB;">"Make it marble."</span></b>
       </div>
 
       <div class="column is-one-quarter">
@@ -204,8 +328,9 @@
       </div>
       <div class="column is-one-quarter">
         <iframe src="golden/dc69734da5324e218c74d42ae0d2a087_ep_0032_full_rebuild_gaussian_40.html" width="100%" height="300px" frameborder="0"></iframe>
-        <p class="has-text-centered" style="font-size: 0.9em;"><b><span style="color: #EFBF04; font-style: italic;">"Make it golden."</span></b></p>
+        <p class="has-text-centered" style="font-size: 1.0em;"><b><span style="color: #EFBF04; font-style: italic; font-family: 'Bradley Hand', cursive; font-weight: 900; -webkit-text-stroke: 0.1px #EFBF04;">"Make it golden."</span></b></p>
       </div>
+
 
       </div>
     </div>
@@ -214,6 +339,27 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Interactive Scene Editing</h2>
+        
+        <div class="content has-text-centered" style="margin-bottom: 2rem;">
+          <video width="100%" controls autoplay loop muted>
+            <source src="images/video2.mov" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="content has-text-centered">
+          <p>
+            With its ~0.26 second inference time, <span class="dnerf">GaussianBlender</span> supports interactive scene editing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -230,7 +376,7 @@
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
+        <div class="content has-text-centered">
           <p>
             We thank the authors of <a href="https://github.com/nerfies/nerfies.github.io"><span class="dnerf">Nerfies</span></a> that kindly open sourced the template of this website.
           </p>
